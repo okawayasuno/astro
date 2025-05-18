@@ -1,34 +1,14 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
 ---
-<!doctype html>
-<html lang="ja">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-        <Header />
+<BaseLayout pageTitle={frontmatter.title}>
 
-            <h1> {frontmatter.title}</h1>
-            <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
-            <p><em>{frontmatter.description}</em></p>
-            <p>著者: {frontmatter.author}</p>
-            <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-            <slot />
+    <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p><em>{frontmatter.description}</em></p>
+    <p>著者: {frontmatter.author}</p>
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    <slot />
 
-        <Footer />
-
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-	
-</html>
+</BaseLayout>
