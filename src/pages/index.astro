@@ -5,17 +5,12 @@ const pageTitle = "ホームページ";
 
 import { Image } from 'astro:assets';
 import localBirdImage from '../assets/img/bird.png';
-
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2>私の素晴らしいブログのサブタイトル</h2>
    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 
    <Image src={localBirdImage} alt="巣の中の卵を温めている鳥。"/>
-	<Image src="/img/bird.png" alt="鳥。" width="50" height="50"/>
-	<Image src="https://example.com/bird.png" alt="鳥。" width="50" height="50"/>
 
 	<img src={localBirdImage.src} alt="巣の中の卵を温めている鳥。">
-	<img src="/img/bird.png" alt="鳥。">
-	<img src="https://example.com/bird.png" alt="鳥。">
 </BaseLayout>
