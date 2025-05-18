@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body class="l_body">
+        <div class="l_col2">
+		    <main class="l_main"/>
+            <aside class="l_aside"/>
+        </div>
+        <footer class="l_footer"/>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+    .l_col2{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap:20px;
+    }
+    .l_main{
+        background: pink;
+        min-height: 40px;
+    }
+    .l_aside{
+        background: lightblue;
+        min-height: 60px;
+    }
+    .l_footer{
+        background: rgb(242, 249, 152);
+        min-height: 60px;
+    }
+</style>
