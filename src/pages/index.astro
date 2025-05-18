@@ -10,7 +10,22 @@ import localBirdImage from '../assets/img/bird.png';
   <h2>私の素晴らしいブログのサブタイトル</h2>
    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 
-   <Image src={localBirdImage} alt="巣の中の卵を温めている鳥。"/>
+   	<div class="img_wrap">
+		<Image src={localBirdImage} alt="巣の中の卵を温めている鳥。"/>
+	</div>
 
-	<img src={localBirdImage.src} alt="巣の中の卵を温めている鳥。">
+	<div class="img_wrap red">
+		<img src={localBirdImage.src} alt="巣の中の卵を温めている鳥。">
+	</div>
 </BaseLayout>
+
+<style lang="scss">
+.img{
+	&_wrap{
+		border:1px solid #333;
+		&.red{
+			border-color: red;
+		}
+	}
+}
+</style>
