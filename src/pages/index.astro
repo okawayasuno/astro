@@ -1,15 +1,7 @@
 ---
-import '../styles/global.css';
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "ホームページ";
 ---
-
-<Layout>
-	<Header />
-
-	<h1>私のAstro学習ブログ</h1>
-	<p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
-
-	<Footer />
-</Layout>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>私の素晴らしいブログのサブタイトル</h2>
+</BaseLayout>
