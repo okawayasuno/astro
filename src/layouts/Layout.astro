@@ -9,7 +9,12 @@
 	</head>
 	<body>
 		<slot />
+		
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
+	
 </html>
 
 <style>
@@ -18,5 +23,11 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+	.div{
+		color: blue;
+		&_txt{
+			color: brown;
+		}
 	}
 </style>
